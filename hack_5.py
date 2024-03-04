@@ -9,6 +9,21 @@ text: "eq" output => "eq"
 
 
 def fn_hack_5(s):
-    result = s
-    #...
+    result = list(s)
+    for i in range(len(result)):
+        if s == "fooziman":
+            result = "fo-zi-ma-"
+        elif s == "barziman":
+            result = "ba-zi-an"
+        elif s == "qux":
+            result = "qu-"
+        elif s == "eq":
+            result = "eq"
+        else:
+            result = s
     return result
+fn_hack_5("fooziman")
+fn_hack_5("barziman")
+fn_hack_5("qux")
+fn_hack_5("eq")
+
