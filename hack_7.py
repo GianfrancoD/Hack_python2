@@ -10,15 +10,18 @@ text: [] output => [0]
 
 
 def fn_hack_7(s):
-    result = s.copy()
-    switchnumber = ["1",2,"3",4,"5"]
-    if not result:
-        result = [0]
-    else:
-        for i in range(len(result)):
-            if result[i] in switch:
-                if result[i] not in switchnumber:
-                    result[i] = switchnumber[i]
+    result = s
+    for i in range(len(result)):
+        if result[i] == "a":
+            result[i] = "1"
+        elif result[i] == "b":
+            result[i] = 2
+        elif result[i] == "c":
+            result[i] = "3"
+        elif result[i] == "d":
+            result[i] = 4
+        elif result[i] == "e":
+            result[i] = "5"
     return result
-switch = ["a","b","c","d","e"]
-fn_hack_7(switch)
+
+fn_hack_7(["a", "b", "c", "d", "e"])

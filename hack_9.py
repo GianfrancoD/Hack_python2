@@ -11,6 +11,4 @@ def fn_hack_9(s):
             result[i] = "Fooziman"
     return result
 
-    """result = {i: "Fooziman" if e == "Fookziman" else e for i, e in result.items()}"""
-
 fn_hack_9({"foo":"fookziman","bar":"barziman"})
