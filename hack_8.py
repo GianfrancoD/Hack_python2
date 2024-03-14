@@ -9,17 +9,15 @@ text: ["a","b"] output => ["2","1"]
 def fn_hack_8(s):
     result = s
     ls = []
-    par = len(result).__mod__(2)
-    if par == 0:
-        for index, value in enumerate(result):
-            result = str(index+1)
-            ls.append(result)
-    if par == 1:
-        for i, e in enumerate(result):
-            result = str(e) + "-" + str(i+1)
-            ls.append(result)
-    result = ls[::-1]
-    return result
+    if len(result).__mod__(2) == 0:    
+        for u, p in enumerate(result):
+                result = str(u+1)
+                ls.append(result)
+    else:
+        for i, p in enumerate(result):
+                result = str(p) + "-"  + str(i+1)
+                ls.append(result)
+    return ls[::-1]
 
 print(fn_hack_8(["a","b","c","d","e"]))
 print(fn_hack_8(["a","b","c"]))
