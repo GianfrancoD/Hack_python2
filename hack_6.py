@@ -22,4 +22,4 @@ def fn_hack_6(s):
                 result[i-1:i+1] = [str(i)]
     return result
 
-print(fn_hack_6(["a","b","c","d","e"]))
+fn_hack_6(["a","b","c","d","e"])
