@@ -11,7 +11,6 @@ text: [] output => ["0"]
 
 def fn_hack_6(s):
     result = s.copy()
-    switchnumber = ["1","-","3","-","5"]
     if not result:
         result = ["0"]
     else:
