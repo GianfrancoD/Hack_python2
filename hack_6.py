@@ -15,10 +15,11 @@ def fn_hack_6(s):
     if not result:
         result = ["0"]
     else:
-        for i in range(len(result)):
-            if result[i] in switch:
-                if result[i] not in switchnumber:
-                    result[i] = switchnumber[i]
+        for i in range(len(result)+1):
+            if i.__mod__(2) == 0:
+                result[i-1:i+1] = "-"
+            else:
+                result[i-1:i+1] = [str(i)]
     return result
-switch = ["a","b","c","d","e"]
-fn_hack_6(switch)
+
+fn_hack_6(["a","b","c","d","e"])
