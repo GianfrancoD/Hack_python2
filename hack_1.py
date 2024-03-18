@@ -8,21 +8,11 @@ text: "eq" output => "eq"
 
 
 def fn_hack_1(s):
-    result = ""
-    count = 0
-    for i in s:
-        if "o" in i:
-            count += 1
-            if count == 2:
-                result += "o"
-            else:
-                result += "O"
-        elif i == "i":
-            result += "I"
-        elif i == "u":
-            result += "U"
-        else:
-            result += i
+    result = s
+    for i in range(0, len(s), 3):
+        txt = s[i:i+3]
+        if len(txt) % 2 != 0:
+            result = result[:i] + f"{txt[0]}{txt[1].upper()}{txt[2]}" + result[i+3:]
     return result
 fn_hack_1("fooziman")
 fn_hack_1("qux")
